@@ -1,0 +1,155 @@
+/* Job Management Specific Styles */
+
+/* Job card preview */
+.job-preview-card {
+  background: #f9f9f9;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-top: 1rem;
+  border-left: 4px solid #f9c349;
+}
+
+.job-preview-card .job-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #000000;
+  margin-bottom: 0.5rem;
+}
+
+.job-preview-card .job-meta {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.job-preview-card .job-meta span {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.job-preview-card .job-meta i {
+  color: #f9c349;
+}
+
+.job-preview-card .job-description {
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.job-preview-card .job-requirements,
+.job-preview-card .job-responsibilities {
+  margin-top: 0.5rem;
+}
+
+.job-preview-card .job-requirements h4,
+.job-preview-card .job-responsibilities h4 {
+  font-size: 0.9rem;
+  color: #000000;
+  margin-bottom: 0.25rem;
+}
+
+.job-preview-card .job-requirements ul,
+.job-preview-card .job-responsibilities ul {
+  padding-left: 1.5rem;
+  color: #555;
+  font-size: 0.9rem;
+  line-height: 1.8;
+}
+
+/* Job type badges */
+.job-type-badge {
+  display: inline-block;
+  padding: 3px 12px;
+  border-radius: 12px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.job-type-badge.full-time {
+  background: #e3f2fd;
+  color: #1976d2;
+}
+
+.job-type-badge.part-time {
+  background: #f3e5f5;
+  color: #7b1fa2;
+}
+
+.job-type-badge.contract {
+  background: #fff3e0;
+  color: #e65100;
+}
+
+.job-type-badge.internship {
+  background: #e8f5e9;
+  color: #2e7d32;
+}
+
+/* Job status indicators */
+.job-status {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.job-status .indicator {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.job-status .indicator.active {
+  background: #4caf50;
+  animation: pulse-green 2s infinite;
+}
+
+.job-status .indicator.inactive {
+  background: #f44336;
+}
+
+@keyframes pulse-green {
+  0% {
+    box-shadow: 0 0 0 0 rgba(76, 175, 80, 0.4);
+  }
+  70% {
+    box-shadow: 0 0 0 6px rgba(76, 175, 80, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(76, 175, 80, 0);
+  }
+}
+
+/* Application deadline indicator */
+.deadline-urgent {
+  color: #f44336;
+  font-weight: 600;
+}
+
+.deadline-soon {
+  color: #ff9800;
+  font-weight: 600;
+}
+
+.deadline-ok {
+  color: #4caf50;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .job-preview-card .job-meta {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .job-preview-card .job-requirements ul,
+  .job-preview-card .job-responsibilities ul {
+    padding-left: 1rem;
+  }
+}

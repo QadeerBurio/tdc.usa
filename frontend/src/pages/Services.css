@@ -1,0 +1,164 @@
+/* ─── Services Page ───────────────────────────────────────────────────────── */
+
+/* ── Page Header ──────────────────────────────────────────────────────────── */
+.services-page-header {
+  position: relative;
+  background: linear-gradient(135deg, #0a0a0f 0%, #111827 50%, #0d1117 100%);
+  padding: 9rem 0 7rem;
+  text-align: center;
+  overflow: hidden;
+}
+
+.services-header-inner {
+  position: relative;
+  z-index: 2;
+}
+
+.services-pre-pill-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.25rem;
+}
+
+.services-pre-pill {
+  display: inline-block;
+  padding: 6px 18px;
+  background: rgba(249, 195, 73, 0.12);
+  border: 1px solid rgba(249, 195, 73, 0.35);
+  border-radius: 50px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: var(--primary-yellow);
+  text-transform: uppercase;
+}
+
+.services-page-header h1 {
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  font-weight: 800;
+  color: #ffffff;
+  line-height: 1.1;
+  margin: 0 0 1.25rem;
+  letter-spacing: -0.02em;
+}
+
+.services-highlight {
+  color: var(--primary-yellow);
+}
+
+.services-header-subtitle {
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.58);
+  max-width: 550px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+/* Decorative orbs */
+.services-header-orbs {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.services-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.1;
+}
+
+.services-orb-1 {
+  width: 500px;
+  height: 500px;
+  background: var(--primary-yellow);
+  top: -180px;
+  right: -140px;
+}
+
+.services-orb-2 {
+  width: 400px;
+  height: 400px;
+  background: #a855f7;
+  bottom: -140px;
+  left: -100px;
+}
+
+/* ── Services List Section ────────────────────────────────────────────────── */
+.services-list {
+  padding: 6rem 0 7rem;
+  background: var(--dark-navy);
+}
+
+.services-grid-responsive {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.5rem;
+}
+
+/* ── Service Detail Styles (used on ServiceDetail page) ──────────────────── */
+.service-detail-icon {
+  font-size: 3rem;
+  color: var(--primary-yellow);
+}
+
+.service-detail-content h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.service-detail-content p {
+  color: var(--secondary-text);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.service-features h4 {
+  margin-bottom: 0.8rem;
+  color: var(--primary-text);
+}
+
+.service-features ul {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 0.8rem;
+}
+
+.service-features ul li {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--secondary-text);
+}
+
+.service-features ul li i {
+  color: var(--primary-yellow);
+}
+
+/* ── Responsive ──────────────────────────────────────────────────────────── */
+@media (max-width: 1024px) {
+  .services-grid-responsive {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .services-page-header {
+    padding: 7rem 0 5rem;
+  }
+
+  .services-grid-responsive {
+    grid-template-columns: 1fr;
+  }
+
+  .service-detail-card {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .service-features ul {
+    grid-template-columns: 1fr;
+  }
+}

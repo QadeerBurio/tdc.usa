@@ -1,0 +1,69 @@
+/* Blog Management Specific Styles */
+
+/* Add any blog-specific overrides here */
+.blog-form .form-group textarea[name="content"] {
+  min-height: 200px;
+  font-family: 'Courier New', monospace;
+}
+
+.blog-preview {
+  background: #f9f9f9;
+  padding: 1.5rem;
+  border-radius: 4px;
+  margin-top: 1rem;
+  border: 1px dashed #ccc;
+}
+
+.blog-preview h3 {
+  color: #000000;
+  margin-bottom: 0.5rem;
+}
+
+.blog-preview .blog-excerpt {
+  color: #666;
+  font-style: italic;
+}
+
+/* Tag styling in table */
+.tags-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.tag {
+  background: #f0f0f0;
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 0.7rem;
+  color: #666;
+}
+
+/* Blog status indicators */
+.status-blog {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.status-blog .dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.status-blog .dot.published {
+  background: #4caf50;
+}
+
+.status-blog .dot.draft {
+  background: #ff9800;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .blog-form .form-row {
+    grid-template-columns: 1fr;
+  }
+}

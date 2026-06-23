@@ -1,0 +1,235 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-black: #0D0D0D;
+  --dark-navy: #111827;
+  --surface: #1E293B;
+  --gold-accent: #F9C349;
+  --primary-yellow: #F9C349;
+  --primary-white: #ffffff;
+  --primary-text: #FFFFFF;
+  --secondary-text: rgba(255, 255, 255, 0.65);
+  --muted-text: rgba(255, 255, 255, 0.45);
+  --borders: rgba(255, 255, 255, 0.08);
+  --gray-light: #1E293B;
+  --gray-dark: rgba(255, 255, 255, 0.65);
+  --transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: var(--primary-text);
+  background-color: var(--primary-black);
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.btn-primary {
+  background-color: var(--primary-yellow);
+  color: var(--primary-black);
+  border: none;
+  padding: 12px 30px;
+  font-weight: 600;
+  border-radius: 30px; /* Modern round button style */
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 15px rgba(249, 195, 73, 0.2);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2.5px) scale(1.02);
+  box-shadow: 0 8px 25px rgba(249, 195, 73, 0.4);
+}
+
+.btn-secondary {
+  background-color: var(--primary-black);
+  color: var(--primary-white);
+  border: 2px solid var(--primary-black);
+  padding: 12px 30px;
+  font-weight: 600;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.btn-secondary:hover {
+  background-color: var(--primary-yellow);
+  border-color: var(--primary-yellow);
+  color: var(--primary-black);
+  transform: translateY(-2.5px) scale(1.02);
+  box-shadow: 0 8px 25px rgba(249, 195, 73, 0.3);
+}
+
+/* Pulsing effect keyframes */
+@keyframes cta-pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(249, 195, 73, 0.4);
+  }
+  70% {
+    box-shadow: 0 0 0 12px rgba(249, 195, 73, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(249, 195, 73, 0);
+  }
+}
+
+.pulse-button {
+  animation: cta-pulse 2s infinite;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: var(--primary-text);
+}
+
+.section-subtitle {
+  font-size: 1.1rem;
+  color: var(--secondary-text);
+  margin-bottom: 3rem;
+}
+
+/* Add Font Awesome */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css');
+
+/* ==========================================================================
+   Premium Motion Design System Overrides
+   ========================================================================== */
+
+/* Elevate all cards with high-fidelity glassmorphic depth & premium borders */
+.project-card,
+.blog-card,
+.premium-service-card,
+.testimonial-card,
+.case-study-card,
+.job-card {
+  position: relative;
+  background: var(--dark-navy) !important;
+  backdrop-filter: blur(12px) !important;
+  border: 1px solid var(--borders) !important;
+  border-radius: 16px !important;
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5), 0 1px 3px rgba(0, 0, 0, 0.05) !important;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), 
+              box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1), 
+              border-color 0.4s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  will-change: transform, box-shadow;
+}
+
+/* Premium micro-interactive hover behaviors: lift, scale, gold glow */
+.project-card:hover,
+.blog-card:hover,
+.premium-service-card:hover,
+.testimonial-card:hover,
+.case-study-card:hover,
+.job-card:hover {
+  transform: translateY(-8px) scale(1.02) !important;
+  border-color: var(--gold-accent) !important;
+  box-shadow: 0 20px 40px -10px rgba(249, 195, 73, 0.12), 
+              0 0 25px 2px rgba(249, 195, 73, 0.08),
+              0 15px 30px rgba(0, 0, 0, 0.5) !important;
+}
+
+/* Card image smooth animations */
+.project-image-container img,
+.blog-image img,
+.case-study-media-wrapper video {
+  transition: transform 0.75s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.project-card:hover .project-image-container img,
+.blog-card:hover .blog-image img,
+.case-study-card:hover .case-study-media-wrapper video {
+  transform: scale(1.05) !important;
+}
+
+/* Premium Blog Contrast & prominence styling */
+.blog-card .blog-content {
+  padding: 2rem !important;
+}
+.blog-card h3 {
+  color: var(--primary-text) !important;
+  transition: color 0.3s ease;
+}
+.blog-card:hover h3 {
+  color: var(--gold-accent) !important;
+}
+.blog-card p {
+  color: var(--secondary-text) !important;
+}
+
+/* Smooth visual rhythm for page sections */
+section {
+  position: relative;
+  will-change: transform;
+}
+
+/* Background depth visual richness styles */
+.home-container {
+  position: relative;
+  background-color: var(--primary-black);
+}
+
+/* Subtle background spotlight layers */
+.home-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100vh;
+  background: radial-gradient(circle at 10% 20%, rgba(249, 195, 73, 0.03) 0%, transparent 60%);
+  z-index: 0;
+  pointer-events: none;
+}
+
+.why-choose-section,
+.industries-section,
+.featured-projects,
+.home-testimonials,
+.home-blogs,
+.home-careers {
+  position: relative;
+}
+
+.why-choose-section::after,
+.industries-section::after,
+.featured-projects::after,
+.home-testimonials::after,
+.home-blogs::after,
+.home-careers::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: radial-gradient(rgba(255, 255, 255, 0.015) 1.2px, transparent 0);
+  background-size: 24px 24px;
+  pointer-events: none;
+  z-index: 1;
+}

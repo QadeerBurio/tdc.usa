@@ -1,0 +1,415 @@
+/* ─── About Page ─────────────────────────────────────────────────────────── */
+
+/* ── Page Header ─────────────────────────────────────────────────────────── */
+.about-page-header {
+  position: relative;
+  background: linear-gradient(135deg, #0a0a0f 0%, #111827 50%, #0d1117 100%);
+  padding: 9rem 0 7rem;
+  text-align: center;
+  overflow: hidden;
+}
+
+.about-header-inner {
+  position: relative;
+  z-index: 2;
+}
+
+.about-pre-pill-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.25rem;
+}
+
+.about-pre-pill {
+  display: inline-block;
+  padding: 6px 18px;
+  background: rgba(249, 195, 73, 0.12);
+  border: 1px solid rgba(249, 195, 73, 0.35);
+  border-radius: 50px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: var(--primary-yellow);
+  text-transform: uppercase;
+}
+
+.about-page-header h1 {
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  font-weight: 800;
+  color: #ffffff;
+  line-height: 1.1;
+  margin: 0 0 1.25rem;
+  letter-spacing: -0.02em;
+}
+
+.about-highlight {
+  color: var(--primary-yellow);
+  position: relative;
+}
+
+.about-header-subtitle {
+  font-size: 1.15rem;
+  color: rgba(255, 255, 255, 0.6);
+  max-width: 500px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+/* Decorative orbs */
+.about-header-orbs {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+}
+.about-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.12;
+}
+.about-orb-1 {
+  width: 500px;
+  height: 500px;
+  background: var(--primary-yellow);
+  top: -200px;
+  left: -150px;
+}
+.about-orb-2 {
+  width: 400px;
+  height: 400px;
+  background: #3b82f6;
+  bottom: -150px;
+  right: -100px;
+}
+
+/* ── Section headers ─────────────────────────────────────────────────────── */
+.about-section-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.about-section-header .about-pre-pill {
+  display: inline-block;
+  margin-bottom: 1rem;
+}
+
+.section-subtitle {
+  color: var(--secondary-text);
+  font-size: 1.05rem;
+  max-width: 520px;
+  margin: 0.75rem auto 0;
+  line-height: 1.7;
+}
+
+/* ── Mission Section ─────────────────────────────────────────────────────── */
+.about-mission {
+  padding: 8rem 0;
+  background: var(--primary-black);
+}
+
+.mission-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  align-items: center;
+}
+
+.mission-label {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  color: var(--primary-yellow);
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+}
+
+.mission-content h2 {
+  font-size: 1.9rem;
+  font-weight: 700;
+  margin: 2rem 0 0.75rem;
+  color: var(--primary-text);
+  letter-spacing: -0.01em;
+}
+
+.mission-content h2:first-of-type {
+  margin-top: 0;
+}
+
+.mission-content p {
+  color: var(--secondary-text);
+  line-height: 1.85;
+  font-size: 1.05rem;
+}
+
+.mission-stats {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0;
+  background: linear-gradient(135deg, #0a0a0f 0%, #111827 100%);
+  padding: 0;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.mission-stats .stat-item {
+  text-align: center;
+  padding: 2.5rem 2rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+  position: relative;
+}
+
+.mission-stats .stat-item:last-child {
+  border-bottom: none;
+}
+
+.mission-stats .stat-item h3 {
+  font-size: 3rem;
+  font-weight: 800;
+  color: var(--primary-yellow);
+  margin: 0 0 0.4rem;
+  line-height: 1;
+}
+
+.mission-stats .stat-item p {
+  color: rgba(255, 255, 255, 0.55);
+  font-size: 0.9rem;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  margin: 0;
+}
+
+/* ── Core Values ─────────────────────────────────────────────────────────── */
+.about-values {
+  padding: 8rem 0;
+  background: var(--dark-navy);
+}
+
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 2rem;
+}
+
+.value-card {
+  text-align: center;
+  padding: 2.5rem 2rem;
+  background: var(--primary-black);
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  border: 1px solid var(--borders);
+  cursor: default;
+  transition: border-color 0.3s ease;
+}
+
+.value-icon-wrapper {
+  width: 64px;
+  height: 64px;
+  border-radius: 16px;
+  background: linear-gradient(135deg, rgba(249, 195, 73, 0.15), rgba(249, 195, 73, 0.05));
+  border: 1px solid rgba(249, 195, 73, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem;
+}
+
+.value-icon-wrapper i {
+  font-size: 1.6rem;
+  color: var(--primary-yellow);
+}
+
+.value-card h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--primary-text);
+  margin: 0 0 0.6rem;
+}
+
+.value-card p {
+  color: var(--secondary-text);
+  font-size: 0.95rem;
+  line-height: 1.65;
+  margin: 0;
+}
+
+/* ── Leadership Team ─────────────────────────────────────────────────────── */
+.about-team {
+  padding: 8rem 0;
+  background: var(--primary-black);
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2.5rem;
+}
+
+.team-card {
+  text-align: center;
+  padding: 2.5rem 2rem;
+  background: var(--dark-navy);
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  border: 1px solid var(--borders);
+  cursor: default;
+}
+
+.team-image {
+  font-size: 4.5rem;
+  color: var(--primary-yellow);
+  margin-bottom: 1.25rem;
+  opacity: 0.9;
+}
+
+.team-card h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--primary-text);
+  margin: 0 0 0.35rem;
+}
+
+.team-card p {
+  color: var(--secondary-text);
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin: 0;
+}
+
+/* ── Testimonials ────────────────────────────────────────────────────────── */
+.about-testimonials {
+  padding: 8rem 0 6rem;
+  background: var(--dark-navy);
+}
+
+.about-testimonials .testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 4rem 2.5rem;
+  margin-top: 1rem;
+}
+
+.about-testimonials .testimonial-card {
+  background: var(--primary-black);
+  padding: 4.5rem 2rem 2.5rem;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  border: 1px solid var(--borders);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  text-align: center;
+  cursor: default;
+}
+
+.about-testimonials .testimonial-avatar-wrapper {
+  position: absolute;
+  top: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: var(--surface);
+  padding: 3px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.about-testimonials .client-avatar {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.about-testimonials .rating-stars {
+  display: flex;
+  justify-content: center;
+  gap: 4px;
+  margin-bottom: 1.25rem;
+}
+
+.about-testimonials .rating-stars i.fa-star { font-size: 0.9rem; }
+.about-testimonials .rating-stars i.fa-star.active { color: #f59e0b; }
+.about-testimonials .rating-stars i.fa-star.inactive { color: #cbd5e1; }
+
+.about-testimonials .testimonial-review {
+  font-size: 0.97rem;
+  line-height: 1.8;
+  color: var(--secondary-text);
+  font-style: italic;
+  margin: 0 0 2rem 0;
+  flex-grow: 1;
+}
+
+.about-testimonials .testimonial-client-meta {
+  border-top: 1px solid var(--borders);
+  padding-top: 1.5rem;
+  margin-top: auto;
+}
+
+.about-testimonials .testimonial-client-meta h4 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--primary-text);
+  margin: 0 0 0.25rem 0;
+}
+
+.about-testimonials .client-designation {
+  font-size: 0.83rem;
+  color: #94a3b8;
+  margin: 0 0 0.75rem 0;
+}
+
+.about-testimonials .client-company-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+}
+
+.about-testimonials .company-name {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--secondary-text);
+}
+
+.about-testimonials .company-logo-img {
+  max-height: 22px;
+  max-width: 80px;
+  object-fit: contain;
+}
+
+/* ── Responsive ─────────────────────────────────────────────────────────── */
+@media (max-width: 900px) {
+  .mission-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-page-header {
+    padding: 7rem 0 5rem;
+  }
+
+  .about-page-header h1 {
+    font-size: 2.5rem;
+  }
+
+  .values-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .team-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .values-grid {
+    grid-template-columns: 1fr;
+  }
+}

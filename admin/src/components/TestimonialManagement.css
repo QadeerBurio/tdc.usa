@@ -1,0 +1,56 @@
+.image-preview-container-t {
+  margin-top: 1rem;
+  border: 1px dashed #cbd5e1;
+  border-radius: 8px;
+  padding: 10px;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  background-color: #f8fafc;
+}
+
+.profile-preview-t {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+
+.logo-preview-t {
+  width: 140px;
+  height: 50px;
+  object-fit: contain;
+  border-radius: 4px;
+  background-color: #fff;
+  border: 1px solid #e2e8f0;
+  padding: 4px;
+}
+
+.btn-remove-t {
+  padding: 4px 12px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  background-color: #fee2e2;
+  color: #991b1b;
+  border: 1px solid #fca5a5;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+}
+
+.btn-remove-t:hover {
+  background-color: #fecaca;
+  color: #7f1d1d;
+}
+
+.stars-list {
+  display: flex;
+  gap: 2px;
+}
+
+.flex-start {
+  align-items: flex-start !important;
+}

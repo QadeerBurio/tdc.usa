@@ -1,0 +1,89 @@
+/* ============================================
+   NEWSLETTER MANAGEMENT STYLES
+   ============================================ */
+
+.newsletter-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.stat-card.stat-filtered .stat-number {
+  color: var(--info-blue, #3b82f6);
+}
+
+.btn-csv {
+  background-color: #10b981 !important;
+  border-color: #10b981 !important;
+  color: #ffffff !important;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.btn-csv:hover:not(:disabled) {
+  background-color: #059669 !important;
+  border-color: #059669 !important;
+}
+
+.subscriber-email-container {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.subscriber-email-container .mail-icon {
+  color: var(--gray-dark, #64748b);
+  font-size: 0.95rem;
+}
+
+.subscriber-email {
+  font-weight: 500;
+  color: var(--gray-darker, #334155);
+}
+
+/* Empty State Styling */
+.empty-state {
+  text-align: center;
+  padding: 4rem 2rem;
+  color: var(--gray-dark, #64748b);
+}
+
+.empty-state i {
+  font-size: 3rem;
+  color: var(--gray-medium, #cbd5e1);
+  margin-bottom: 1.25rem;
+  display: block;
+}
+
+.empty-state h3 {
+  font-size: 1.3rem;
+  color: var(--primary-black, #0f172a);
+  margin: 0 0 0.5rem 0;
+  font-weight: 700;
+}
+
+.empty-state p {
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+/* Table overrides */
+.newsletter-management .items-table table th,
+.newsletter-management .items-table table td {
+  padding: 1rem 1.25rem;
+}
+
+.newsletter-management .items-table tbody tr:hover {
+  background-color: #f8fafc;
+}
+
+/* Responsive adjust */
+@media (max-width: 768px) {
+  .newsletter-stats {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}

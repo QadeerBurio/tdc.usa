@@ -1,0 +1,169 @@
+.premium-service-card {
+  position: relative;
+  background-color: #0D0D0D;
+  color: var(--primary-text);
+  border: 1px solid var(--borders);
+  border-radius: 16px;
+  padding: 2.5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 350px;
+  cursor: pointer;
+  overflow: hidden;
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.4);
+  
+  /* 3D tilt & spotlight variables */
+  transform-style: preserve-3d;
+  perspective: 1000px;
+  transform: perspective(1000px) rotateX(var(--rotate-x, 0deg)) rotateY(var(--rotate-y, 0deg)) translateY(0px);
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.4s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Hover effects */
+.premium-service-card:hover {
+  background-color: #0D0D0D;
+  border-color: var(--gold-accent);
+  box-shadow: 0 20px 40px rgba(249, 195, 73, 0.12), 0 0 25px rgba(249, 195, 73, 0.08), 0 8px 16px rgba(0, 0, 0, 0.6);
+  transform: perspective(1000px) rotateX(var(--rotate-x, 0deg)) rotateY(var(--rotate-y, 0deg)) translateY(-8px) scale(1.02);
+}
+
+/* Spotlight sweep & light reflection */
+.premium-service-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(
+    350px circle at var(--mouse-x, 0px) var(--mouse-y, 0px),
+    rgba(229, 182, 62, 0.18),
+    transparent 60%
+  );
+  z-index: 3;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.premium-service-card:hover::before {
+  opacity: 1;
+}
+
+/* Subtle tech graphic background */
+.service-card-bg-graphic {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+  color: #E5B63E;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+
+.premium-service-card:hover .service-card-bg-graphic {
+  opacity: 1.2;
+}
+
+.service-card-top {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+.service-card-icon {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(229, 182, 62, 0.1);
+  color: #E5B63E;
+  font-size: 1.8rem;
+  border-radius: 10px;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.premium-service-card:hover .service-card-icon {
+  background-color: rgba(229, 182, 62, 0.2);
+}
+
+.service-card-title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--primary-text);
+  margin: 0;
+  line-height: 1.3;
+}
+
+.service-card-desc {
+  position: relative;
+  z-index: 2;
+  font-size: 0.95rem;
+  color: var(--secondary-text);
+  line-height: 1.6;
+  margin: 0 0 1.5rem 0;
+}
+
+/* Optional Highlights checklist */
+.service-card-highlights {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  margin-bottom: 2rem;
+  border-top: 1px dashed rgba(249, 195, 73, 0.25);
+  padding-top: 1.25rem;
+}
+
+.highlight-tag {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.highlight-check {
+  color: var(--gold-accent);
+  font-weight: 900;
+  font-size: 1.05rem;
+}
+
+.highlight-text {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--secondary-text);
+}
+
+.service-card-footer {
+  position: relative;
+  z-index: 2;
+  margin-top: auto;
+}
+
+.service-learn-more {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--primary-text);
+  transition: color 0.3s ease;
+}
+
+.premium-service-card:hover .service-learn-more {
+  color: var(--gold-accent);
+}
+
+.learn-more-arrow {
+  display: inline-block;
+  font-size: 1.1rem;
+}

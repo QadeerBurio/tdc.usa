@@ -1,0 +1,184 @@
+.career-detail-page {
+  padding: 8rem 0 6rem;
+  background-color: var(--primary-black);
+}
+
+.career-layout {
+  display: grid;
+  grid-template-columns: 1.4fr 0.6fr;
+  gap: 3.5rem;
+  align-items: start;
+}
+
+.career-header-card {
+  background: var(--gray-light);
+  padding: 2.5rem;
+  border-radius: 12px;
+  margin-bottom: 3rem;
+  border-left: 5px solid var(--primary-yellow);
+}
+
+.career-header-card h1 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin: 1rem 0;
+  color: var(--primary-text);
+}
+
+.type-badge {
+  display: inline-block;
+  padding: 6px 14px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.type-badge.full-time {
+  background-color: rgba(59, 130, 246, 0.12);
+  color: #3b82f6;
+  border: 1px solid rgba(59, 130, 246, 0.25);
+}
+
+.type-badge.part-time {
+  background-color: rgba(168, 85, 247, 0.12);
+  color: #a855f7;
+  border: 1px solid rgba(168, 85, 247, 0.25);
+}
+
+.type-badge.contract {
+  background-color: rgba(249, 115, 22, 0.12);
+  color: #f97316;
+  border: 1px solid rgba(249, 115, 22, 0.25);
+}
+
+.type-badge.internship {
+  background-color: rgba(16, 185, 129, 0.12);
+  color: #10b981;
+  border: 1px solid rgba(16, 185, 129, 0.25);
+}
+
+.job-meta-badges {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  color: var(--secondary-text);
+  font-size: 0.95rem;
+  margin-top: 1rem;
+}
+
+.job-meta-badges span {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.job-meta-badges i {
+  color: var(--primary-yellow);
+}
+
+/* Content Sections */
+.job-section {
+  margin-bottom: 3rem;
+}
+
+.job-section h2 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 1.2rem;
+  color: var(--primary-text);
+  border-bottom: 1px solid var(--borders);
+  padding-bottom: 0.6rem;
+}
+
+.description-text {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: var(--secondary-text);
+}
+
+.bullet-list {
+  list-style: none;
+  padding-left: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.bullet-list li {
+  position: relative;
+  padding-left: 1.8rem;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: var(--secondary-text);
+}
+
+.bullet-list li::before {
+  content: "\2022";
+  color: var(--primary-yellow);
+  font-weight: bold;
+  font-size: 1.8rem;
+  position: absolute;
+  left: 0.5rem;
+  top: -0.3rem;
+}
+
+.benefits-list li::before {
+  display: none;
+}
+
+.benefits-list li {
+  padding-left: 0;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.benefits-list i {
+  color: var(--primary-yellow);
+  font-size: 1.1rem;
+}
+
+/* Sidebar */
+.career-sidebar .cta-card {
+  background: var(--dark-navy);
+  border: 1px solid var(--borders);
+  border-radius: 12px;
+  padding: 2.5rem 2rem;
+  position: sticky;
+  top: 100px;
+}
+
+.cta-card h3 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.cta-card p {
+  color: var(--secondary-text);
+  line-height: 1.6;
+  font-size: 0.95rem;
+  margin-bottom: 2rem;
+}
+
+.posted-date {
+  display: block;
+  text-align: center;
+  font-size: 0.85rem;
+  color: #94a3b8;
+  margin-top: 1.5rem;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .career-layout {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .career-sidebar .cta-card {
+    position: relative;
+    top: 0;
+  }
+}
